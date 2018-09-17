@@ -62,8 +62,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n75-Bd-AFF">
-                                <rect key="frame" x="137" y="276" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n75-Bd-AFF">
+                                <rect key="frame" x="50" y="276" width="275" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="tapBtn:" destination="tEF-BU-UKN" eventType="touchUpInside" id="BD4-FJ-g58"/>
@@ -76,6 +76,8 @@
                             <constraint firstItem="n75-Bd-AFF" firstAttribute="top" secondItem="bOA-PH-H0y" secondAttribute="bottom" constant="108" id="s6S-EC-xYL"/>
                             <constraint firstItem="bOA-PH-H0y" firstAttribute="top" secondItem="UGn-Mn-9fh" secondAttribute="top" constant="50" id="viH-Go-emg"/>
                             <constraint firstItem="bOA-PH-H0y" firstAttribute="leading" secondItem="UGn-Mn-9fh" secondAttribute="leading" constant="30" id="yc4-00-Wap"/>
+                            <constraint firstItem="n75-Bd-AFF" firstAttribute="leading" secondItem="UGn-Mn-9fh" secondAttribute="leading" constant="50" id="yyY-Vb-l6D"/>
+                            <constraint firstItem="UGn-Mn-9fh" firstAttribute="trailing" secondItem="n75-Bd-AFF" secondAttribute="trailing" constant="50" id="zO8-5d-dth"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UGn-Mn-9fh"/>
                     </view>
