@@ -17,6 +17,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
        
     }
+    //一覧表示のため
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
+    }
     //行数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int
     {
