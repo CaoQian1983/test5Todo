@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    let todo = Todo()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -19,18 +20,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     //一覧表示のため
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        todo.list.removeAll()
+        todo.getAll()
+        tableView.reloadData()
     }
     //行数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int
     {
-        return 10
+        return todo.list.count
     }
     //セル中身を決める
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
             let cell = UITableViewCell()
-            cell.textLabel?.text = "タスク"
+            cell.textLabel?.text = todo.list[indexPath.row]["title"] as? String
             return cell
     }
 }
