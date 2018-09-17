@@ -10,6 +10,7 @@
 		0B99A3405458425D6245C00F /* Pods_test5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D7D8E5E343159B3D315051 /* Pods_test5.framework */; };
 		705527FA8CEAEBCBA13DE2C1 /* Pods_test5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8C50ADFB8E918CCD05D0E1 /* Pods_test5Tests.framework */; };
 		A4AC5E59D669A286EAC4CD49 /* Pods_test5UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F9595CBA3C34208216B95 /* Pods_test5UITests.framework */; };
+		F10EC8EF214F7F71000FD57D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10EC8EE214F7F71000FD57D /* AddViewController.swift */; };
 		F174EB732136CD4700F85FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174EB722136CD4700F85FDB /* AppDelegate.swift */; };
 		F174EB752136CD4700F85FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174EB742136CD4700F85FDB /* ViewController.swift */; };
 		F174EB782136CD4700F85FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174EB762136CD4700F85FDB /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		85D7D8E5E343159B3D315051 /* Pods_test5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8C50ADFB8E918CCD05D0E1 /* Pods_test5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F82AF3C4BE56F990BDD5EC /* Pods-test5UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test5UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test5UITests/Pods-test5UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F10EC8EE214F7F71000FD57D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		F174EB6F2136CD4700F85FDB /* test5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F174EB722136CD4700F85FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F174EB742136CD4700F85FDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				F174EB722136CD4700F85FDB /* AppDelegate.swift */,
 				F174EB742136CD4700F85FDB /* ViewController.swift */,
 				F174EB762136CD4700F85FDB /* Main.storyboard */,
+				F10EC8EE214F7F71000FD57D /* AddViewController.swift */,
 				F174EB792136CD4800F85FDB /* Assets.xcassets */,
 				F174EB7B2136CD4800F85FDB /* LaunchScreen.storyboard */,
 				F174EB7E2136CD4800F85FDB /* Info.plist */,
@@ -379,6 +382,7 @@
 			files = (
 				F174EB752136CD4700F85FDB /* ViewController.swift in Sources */,
 				F174EB732136CD4700F85FDB /* AppDelegate.swift in Sources */,
+				F10EC8EF214F7F71000FD57D /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
