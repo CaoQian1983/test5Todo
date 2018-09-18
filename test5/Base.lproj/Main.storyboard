@@ -83,6 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mYb-XK-aAA"/>
                     <connections>
+                        <outlet property="Btn" destination="n75-Bd-AFF" id="fok-bM-Ljg"/>
                         <outlet property="textField" destination="bOA-PH-H0y" id="uJA-ac-Qsa"/>
                     </connections>
                 </viewController>

@@ -39,6 +39,18 @@ class Todo : Object {
             self.list.append(todo)
         }
     }
+    //特定のデータのみ取ってくる
+    func getData(id : Int) -> Todo {
+       
+        //database接続
+        let realm = try! Realm()
+       
+        //dataを取得
+        let todo = realm.objects(Todo.self).filter("id = \(id)").first
+       
+        //dataを返す
+        return todo!
+    }
     //更新
     //削除
     func delete(id: Int) {
