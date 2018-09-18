@@ -2,7 +2,7 @@
 import Foundation
 import RealmSwift
 
-//データ新規登録、取得、更新、削除
+//データ1新規登録、2取得、4更新、3削除
 
 class Todo : Object {
     //カラム名を決める
@@ -29,6 +29,7 @@ class Todo : Object {
         }
     }
     //取得
+   // databaseからgetallを配列へ
     func getAll() {
         let realm = try! Realm()
         let list = realm.objects(Todo.self)
@@ -40,6 +41,19 @@ class Todo : Object {
     }
     //更新
     //削除
+    func delete(id: Int) {
+       
+        //DBに接続
+        let realm = try! Realm()
+       
+        //削除データを決める
+        let todo = realm.objects(Todo.self).filter("id = \(id)").first
+       
+        //取得データを削除
+        try! realm.write {
+            realm.delete(todo!)
+        }
+    }
     
 }
 
