@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
    //関連する、インスタンス化
@@ -25,6 +25,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         todo.getAll()
         tableView.reloadData()
     }
+   
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     //行数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section : Int) -> Int
     {
@@ -37,30 +41,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.textLabel?.text = todo.list[indexPath.row]["title"] as? String
             return cell
     }
-  //削除の表示
+    //削除の表示
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle ==  .delete{
-           
+            
             //databaseから削除するデータを指定するため
             let id = todo.list[indexPath.row]["id"] as! Int
-              todo.delete(id: id)
+            todo.delete(id: id)
             
             //画面からtodoを消す
             todo.list.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-
             
-       }
+            
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = todo.list[indexPath.row]["id"]
         performSegue(withIdentifier: "Segue", sender: id)
-        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Segue"{
             let addVC = segue.destination as! AddViewController
             addVC.id = sender as! Int
         }
     }
+   
+    
 }
-

@@ -28,8 +28,18 @@ class AddViewController: UIViewController {
     }
 
     @IBAction func tapBtn(_ sender: UIButton) {
+       //テキストフィールドが空だった場合
+        if textField.text! == "" {
+    //アラートを表示してあげる,returnは処理を終わる、while文の中に、繰り返し処理をいやめる場合はbreak,段階を途中でスキップ処理の場合はcontinueを利用
+            return
+            
+        }
         //新規保存
+        if id == Int() {
         todo.create(title: textField.text!)
+        }else{
+            todo.update(id: id, title: textField.text!)
+        }
         
         //更新処理
         
